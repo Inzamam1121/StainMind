@@ -1,0 +1,68 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+.App {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.radial-gradient {
+  /* background: linear-gradient( 43.5deg,#000000 0%, #051133 3.6%, #016194 50.6%, #061131 87.6% , #000000 100%); */
+  background: #fcfeff;
+
+  /* background-color: #ececec3b */
+
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.menu-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.menu-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.menu-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.elevation{
+  background-color: #fcfeff;
+  box-shadow: 0px 0px 24px 17px #fcfeff
+}

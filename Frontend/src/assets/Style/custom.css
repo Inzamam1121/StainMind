@@ -1,0 +1,57 @@
+.BackgroundBanner{
+    background: url('../../images/Banner2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.BackgroundService{
+    background: url('../../images/Banner.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.BackgroundPartner{
+    background: url('../../images/PartnerBanner.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.BackgroundAbout{
+    background: url('../../images/About.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+
+.BackgroundContact{
+    background: url('../../images/ContactBanner.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+}
+
+.shadowtext{
+	-webkit-text-stroke: 1px #e4e4e4;
+	text-shadow:  2px 2px 20px  #dadada;
+}
+
+.bgfooter{
+    background: url('../../images/FooterImage.png');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:650px) {
+    .bgfooter{
+        background-size:cover;
+    }
+}

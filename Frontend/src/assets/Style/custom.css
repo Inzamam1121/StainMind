@@ -44,7 +44,7 @@
 }
 
 .bgfooter{
-    background: url('../../images/FooterImage.png');
+    background:white;
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;

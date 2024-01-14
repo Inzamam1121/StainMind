@@ -53,10 +53,10 @@ const Partners = () => {
 
     return (
         <div className='md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}>
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh]`}>
                 <div className=" flex flex-col justify-center  max-w-4xl text-center lg:text px-5 items-center lg:items">
-                    <h2 className="text-xl lg:text-3xl text-center font-semibold md:text-gray-800 text-gray-400 inline-block bg-clip-text md:shadowtext">Our Partners</h2>
-                    <h1 className="text-5xl lg:text-6xl text-center text-gray-800 font-black mb-3 inline-block  bg-clip-text shadowtext">Collaborative Excellence in AI</h1>
+                    <h2 className="text-xl lg:text-3xl text-center font-semibold md:text-gray-800 text-gray-400 inline-block bg-clip-text">Our Partners</h2>
+                    <h1 className="text-5xl lg:text-6xl text-center text-gray-800 font-black mb-3 inline-block  bg-clip-text">Collaborative Excellence in AI</h1>
                 </div>
             </div>
 
@@ -94,14 +94,6 @@ const Partners = () => {
                     })}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center flex-wrap gap-20 py-20">
-                    {PartNew.map((item,index)=>(
-                        <div key={index} className="bg-white rounded-2xl shadow-gray-700 shadow-xl px-8 py-8 W-[100%] text-center h-[100%]">
-                            <h3 className="text-xl lg:text-2xl font-extrabold text-center text-gray-700  inline-block bg-clip-text mb-4">{item.Title}</h3>
-                            <p className="text-sm lg:text-base font-medium text-center text-gray-500  inline-block bg-clip-text">{item.Des}</p>
-                        </div>
-                    ))}
-                </div>
             </div>
 
 

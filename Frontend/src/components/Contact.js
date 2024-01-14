@@ -120,12 +120,12 @@ const Contact = () => {
             Icon: IoCall
         },
         {
-            Content: "123@example.com",
+            Content: "ai@stainmind.com",
             Type: "Email Us",
             Icon: MdEmail
         },
         {
-            Content: "New-York, Landon ,US",
+            Content: "California ,US",
             Type: "Our Location",
             Icon: FaLocationArrow
         },
@@ -133,9 +133,9 @@ const Contact = () => {
 
     return (
         <div className='md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundContact bg-[#f2f2f2]`}>
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] `}>
                 <div className=" flex flex-col justify-center text-center lg:text px-5 items-center lg:items">
-                    <h1 className="text-3xl lg:text-6xl text-center text-gray-400 font-black mb-3 inline-block  bg-clip-text shadowtext">Get in Touch with Stain Mind</h1>
+                    <h1 className="text-3xl lg:text-6xl text-center  font-black mb-3 inline-block  bg-clip-text">Get in Touch with Stain Mind</h1>
                 </div>
             </div>
             {comp3}

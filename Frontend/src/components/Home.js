@@ -69,11 +69,8 @@ function Home(props) {
 
 
     const feature1 = (
-        <div className='flex flex-col lg:flex-row justify-around items-start flex-wrap lg:flex-nowrap mb-20 lg:mb-36 rounded-md elevation py-10 lg:py-20 gap-6'
-            data-aos="fade-up"
-            data-aos-duration='1000'
-            data-aos-easing="ease-in-quad">
-            <div className="flex flex-col justify-center text-left px-3 lg:px-5 md:basis-[50%]">
+        <div className='flex flex-col lg:flex-row justify-around items-start flex-wrap lg:flex-nowrap mb-12 lg:mb-24 rounded-md elevation py-10 lg:py-20 gap-6'>
+            <div className="flex flex-col justify-center text-left px-3 lg:px-5 md:basis-[45%]">
                 <h2 className="text-xl lg:text-3xl mb-10 font-bold text-black">Welcome to Stain Mind  </h2>
                 <p className="text-lg lg:text-xl text-black text-justify">
                     The nexus where chaos and strategy converge in the realm of AI consulting. At Stain Mind, we embrace the intricate dance of disorder and order, transforming the tumultuous landscape of AI innovation into streamlined, strategic solutions. Our mission is to guide visionary leaders through the labyrinth of AI's complexities, shedding light on paths less traveled and revealing opportunities hidden within the chaos.
@@ -81,15 +78,10 @@ function Home(props) {
             </div>
 
             <div className="w-[100%] text-gray-700 text-md flex flex-col justify-start md:basis-[45%] text-left px-3 lg:px-5 text-lg">
-                <Typist typingDelay={40} loop={true} cursor={' | '}>
+                <h2 className="text-xl lg:text-3xl mb-10 font-bold text-black">World of AI</h2>
+                <p className="text-lg lg:text-xl text-black text-justify">
                     In a world where AI constantly redefines the boundaries of possibility, Stain Mind stands as a beacon of clarity and direction. We specialize in harnessing the untamed potential of AI, molding it into powerful tools and strategies that propel businesses forward. Whether navigating the unpredictable currents of data, carving out bespoke AI solutions, or demystifying the intricacies of machine learning, our approach is rooted in a deep understanding of both the art and science of AI.
-                    <Typist.Delay ms={2000} />
-                    <Typist.Backspace count={75} typingDelay={25} />
-                </Typist>
-
-                <button className="bg-gray-500 text-white text-xl font-bold px-4 py-3 rounded-md hover:bg-black w-[100%] self-center mt-5 hover:scale-100 hover:-translate-y-3 ease-out duration-200">
-                    <Link to="/contact-us" className='text-white' style={{ textDecoration: "none" }}>Try Now</Link>
-                </button>
+                </p>
             </div>
         </div>
     );
@@ -97,9 +89,6 @@ function Home(props) {
 
     const comp3 = (
         <div
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-quad"
             className='w-[90%] lg:w-[70%] m-auto'
         >
             <div className="flex flex-col justify-between items-center flex-wrap py-10 md:py-20 mb-30 rounded-mdshadow-lg">
@@ -146,7 +135,7 @@ function Home(props) {
                     <div>
                         <button
                             type="submit"
-                            className="bg-gray-500 text-white px-4 py-3 rounded-md hover:bg-black w-fit self-center mt-5 hover:scale-125 hover:-translate-y-5 ease-out duration-300"
+                            className="bg-gray-500 text-white px-4 py-3 rounded-md  w-fit self-center mt-3"
                             disabled={Submit ? true : false}
                         >
                             Submit
@@ -172,22 +161,24 @@ function Home(props) {
 
     return (
         <div className="bg-transparent">
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] md:h-[70vh] lg:h-[100vh] BackgroundBanner`}
-                data-aos="fade-up"
-                data-aos-duration='1000'
-                data-aos-easing="ease-in-quad">
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] md:h-[70vh] lg:h-[100vh] BackgroundBanner`}>
                 <div className=" flex flex-col justify-center text-center lg:text px-5 items-center lg:items">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl text-center font-semibold text-gray-900  inline-block bg-clip-text"> Welcome to  </h2>
                     <h1 className="text-5xl md:text-8xl lg:text-9xl text-center text-gray-700 font-black mb-3 inline-block  bg-clip-text shadowtext">STAIN MIND</h1>
                 </div>
             </div>
             <div className="flex justify-center align-middle flex-col mb-16 space-y-4 lg:space-y-8">
-                <h2 className="text-xl lg:text-5xl font-semibold text-center text-gray-700  inline-block bg-clip-text">Where Choas Meets Clarity</h2>
+                <h2 className="text-xl lg:text-5xl font-semibold text-center text-gray-700  inline-block bg-clip-text">Where Chaos Meets Clarity</h2>
                 <p className="text-base lg:text-xl text-center text-black  inline-block bg-clip-text"> Navigating the Chaos of Innovation – Crafting AI Strategies for Visionary Leaders.</p>
             </div>
 
 
             {feature1}
+
+            <div className="flex justify-center align-middle flex-col space-y-4 lg:space-y-8 w-[95%] m-auto md:w-[80%] lg:w-[60%] pb-16">
+                <h2 className="text-xl lg:text-5xl font-semibold text-center text-gray-700  inline-block bg-clip-text">Where Choas Meets Clarity</h2>
+                <p className="text-base lg:text-xl text-center text-black  inline-block bg-clip-text ">Join us at Stain Mind, where chaos is not a hurdle but a stepping stone to innovation, and where every challenge is an opportunity to redefine the future.</p>
+            </div>
 
             <div className="flex justify-center align-middle flex-col mb-16 space-y-8 w-[95%] md:w-[80%] m-auto pb-32">
                 <h2 className="text-xl lg:text-5xl font-semibold text-center text-gray-700  inline-block bg-clip-text mb-10">Our Services - Tailored AI Solutions</h2>

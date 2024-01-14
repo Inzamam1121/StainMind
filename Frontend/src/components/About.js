@@ -16,7 +16,7 @@ import AlertContext from '../Alert/AlertContext';
 const About = (props) => {
 
     const AletContext = useContext(AlertContext);
-    const {showAlert} = AletContext;
+    const { showAlert } = AletContext;
 
     props.navbarChange(3);
     useEffect(() => {
@@ -42,7 +42,7 @@ const About = (props) => {
         });
     };
 
-    const handleSubmit =async (e) => {
+    const handleSubmit = async (e) => {
         setSubmit(true);
         e.preventDefault();
         const response = await fetch('https://www.stainmind.com/sendMail', {
@@ -54,7 +54,7 @@ const About = (props) => {
         });
 
         const data = await response.json();
-        if(data.success){
+        if (data.success) {
             setSubmit(false);
             showAlert('Form submitted with data', "success");
             // Clear the form fields
@@ -63,7 +63,7 @@ const About = (props) => {
                 email: '',
                 message: '',
             });
-        }else{
+        } else {
             showAlert('Error Occured', "danger");
             setSubmit(false);
         }
@@ -73,9 +73,7 @@ const About = (props) => {
 
     const comp3 = (
         <div
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-quad"
+
             className='w-[90%] lg:w-[70%] m-auto'
         >
             <div className="flex flex-col justify-between items-center flex-wrap py-10 md:py-20 mb-30 rounded-mdshadow-lg">
@@ -122,10 +120,10 @@ const About = (props) => {
                     <div>
                         <button
                             type="submit"
-                            className="bg-gray-500 text-white px-4 py-3 rounded-md hover:bg-black w-fit self-center mt-5 hover:scale-125 hover:-translate-y-5 ease-out duration-300"
+                            className="bg-gray-500 text-white px-4 py-3 rounded-md w-fit self-center mt-5 "
                             disabled={Submit ? true : false}
                         >
-                            Submit
+                            {Submit ? "Submiting..." : "Submit"}
                         </button>
                     </div>
                 </form>
@@ -155,16 +153,8 @@ const About = (props) => {
     ]
 
     const feature2 = (
-        <div className='flex flex-row lg:h-[90vh] justify-around flex-wrap lg:flex-nowrap mb-36 rounded-md elevation py-10 lg:py-52'
-            data-aos="fade-up"
-            data-aos-duration='1000'
-            data-aos-easing="ease-in-quad">
-            <div className=" w-[100%] md:basis-[45%] md:w-auto text-black text-md flex flex-col justify-center max-w-3xl text-left px-5 mt-10">
-
-                <img src={About2} alt="" srcset="" />
-
-            </div>
-            <div className=" flex flex-col justify-center max-w-3xl text-left px-5 md:basis-[55%]">
+        <div className='flex flex-row  justify-around flex-wrap lg:flex-nowrap rounded-md elevation lg:w-[85%] md:w-[90%] w-[95%] m-auto'>
+            <div className=" flex flex-col justify-center text-left px-5 md:basis-[55%]">
                 <h2 className="text-2xl lg:text-5xl mb-10 font-bold text-gray-700"> About us </h2>
                 <p className="text-lg lg:text-xl text-black mb-4 text-justify">
                     At Stain Mind, our journey began with a fundamental belief: in the chaos of AI innovation lies the seed of unparalleled strategic opportunity. Our inception was fueled by a vision to harness this tumultuous energy and channel it into transformative AI strategies for businesses.
@@ -172,9 +162,11 @@ const About = (props) => {
                 <p className="text-lg lg:text-xl text-black mb-8 text-justify">
                     Founded by a group of AI enthusiasts and strategic thinkers, Stain Mind emerged from the desire to navigate the complexities of artificial intelligence and simplify them for practical business applications. We recognized early on that the rapid evolution of AI, while overwhelming for many, is ripe with potential to redefine industries, reinvent processes, and revolutionize customer experiences.
                 </p>
-                <button className="bg-gray-500 text-white text-xl font-bold px-4 py-3 rounded-md hover:bg-black w-[100%] self-center mt-5 hover:scale-100 hover:-translate-y-3 ease-out duration-200">
-                    <Link to="/contact-us" className='text-white' style={{ textDecoration: "none" }}>Try Now</Link>
-                </button>
+
+            </div>
+            <div className=" w-[100%] md:basis-[45%] md:w-auto text-black text-md flex flex-col justify-center text-left px-5 mt-10">
+
+                <img src={About2} alt="" srcset="" />
 
             </div>
         </div>
@@ -182,10 +174,7 @@ const About = (props) => {
 
     return (
         <div className='md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}
-                data-aos="fade-up"
-                data-aos-duration='1000'
-                data-aos-easing="ease-in-quad">
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}>
                 <div className=" flex flex-col justify-center  text-center lg:text px-5 items-center lg:items">
                     <h2 className="text-xl lg:text-3xl text-center font-semibold text-white  inline-block bg-clip-text">Our Story</h2>
                     <h1 className="text-5xl lg:text-6xl text-center text-gray-900 font-black mb-3 inline-block  bg-clip-text shadowtext">Pioneering AI Strategies</h1>
@@ -197,6 +186,18 @@ const About = (props) => {
             </div>
 
             {feature2}
+
+            <div className="flex flex-col text-left px-5 gap-2 lg:w-[85%] md:w-[90%] w-[95%] m-auto">
+                <p className="text-lg lg:text-xl text-black mb-4 text-justify">
+                    Our commitment has always been to demystify AI, making it accessible and strategically viable for organizations of all sizes. We observed how many businesses struggled to align the disruptive force of AI with their strategic goals, often getting lost in the maze of technological jargon and uncharted territories of digital transformation.
+                </p>
+                <p className="text-lg lg:text-xl text-black mb-8 text-justify">
+                    Stain Mind was born out of this need for clarity. We embarked on a mission to be the compass that guides companies through the AI landscape, turning the apparent chaos into a well-orchestrated symphony of strategic success. From identifying AI-driven opportunities to executing bespoke solutions, our approach has consistently been about creating harmony between technological possibilities and business realities.
+                </p>
+                <p className="text-lg lg:text-xl text-black mb-8 text-justify">Today, Stain Mind stands as a testament to the power of blending innovative AI solutions with strategic foresight. Our story is one of passion, perseverance, and the relentless pursuit of excellence in a field that's constantly evolving. As we continue to pioneer AI strategies, we remain dedicated to our original vision – transforming chaos into strategy, one AI solution at a time.</p>
+
+                <p className="text-lg lg:text-xl text-black mb-8 text-justify">As we journey through the evolving landscape of AI, our strength lies in our diverse and talented team at Stain Mind. Each member brings a unique blend of expertise, experience, and vision, forming the backbone of our pioneering strategies.</p>
+            </div>
 
             <div className="flex justify-center align-middle flex-col mb-16 space-y-8 w-[90%] md:w-[80%] m-auto py-28">
                 <h2 className="text-xl lg:text-5xl font-semibold text-center text-gray-700  inline-block bg-clip-text mb-10">Leadership Team</h2>

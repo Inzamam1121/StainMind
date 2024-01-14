@@ -52,10 +52,7 @@ const Story = () => {
     ]
     return (
         <div className='mx-1 md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}
-                data-aos="fade-up"
-                data-aos-duration='1000'
-                data-aos-easing="ease-in-quad">
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}>
                 <div className=" flex flex-col justify-center  text-center lg:text px-5 items-center lg:items">
                     <h2 className="text-xl lg:text-3xl text-center font-semibold text-white  inline-block bg-clip-text shadowtext">Our Success Stories</h2>
                     <h1 className="text-3xl lg:text-6xl text-center text-gray-900 font-black mb-3 inline-block  bg-clip-text shadowtext">Transforming Chaos into Strategy</h1>

@@ -56,9 +56,6 @@ const Contact = () => {
 
     const comp3 = (
         <div
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-quad"
             className='w-[90%] lg:w-[70%] m-auto'
         >
             <div className="flex flex-col justify-between items-center flex-wrap py-10 md:py-20 mb-30 rounded-mdshadow-lg">
@@ -136,10 +133,7 @@ const Contact = () => {
 
     return (
         <div className='md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundContact bg-[#f2f2f2]`}
-                data-aos="fade-up"
-                data-aos-duration='1000'
-                data-aos-easing="ease-in-quad">
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundContact bg-[#f2f2f2]`}>
                 <div className=" flex flex-col justify-center text-center lg:text px-5 items-center lg:items">
                     <h1 className="text-3xl lg:text-6xl text-center text-gray-400 font-black mb-3 inline-block  bg-clip-text shadowtext">Get in Touch with Stain Mind</h1>
                 </div>
@@ -150,7 +144,7 @@ const Contact = () => {
                 <div className="flex flex-col md:flex-row justify-between items-start gap-24 w-[90%] lg:w-[80%] m-auto">
                     {Phone.map((item, index) => (
                         <div key={index} className="bg-white rounded-2xl shadow-gray-700 shadow-xl pt-6 pb-6 py-10 text-center w-[100%] h-[200px] relative flex flex-col gap-1 justify-center items-center">
-                            <div className='w-[50px] h-[50px] md:w-[50px] md:h-[50px] bg-gray-700 p-2 md:p-3 m-auto left-0 right-0 rounded-2xl text-[#fff] cursor-pointer hover:bg-white hover:text-gray-700 hover:shadow-gray-700 hover:shadow-xl ease-in-out duration-1000 hover:ease-in-out hover:duration-1000'>
+                            <div className='w-[50px] h-[50px] md:w-[50px] md:h-[50px] bg-gray-700 p-2 md:p-3 m-auto left-0 right-0 rounded-2xl text-[#fff] cursor-pointer'>
                                 {<item.Icon className='w-[100%] h-[100%] object-cover ' />}
                             </div>
                             <h3 className="text-xl lg:text-xl font-extrabold text-center text-gray-700  inline-block bg-clip-text w-[90%]">{item.Content}</h3>

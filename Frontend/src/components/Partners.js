@@ -53,12 +53,9 @@ const Partners = () => {
 
     return (
         <div className='md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}
-                data-aos="fade-up"
-                data-aos-duration='1000'
-                data-aos-easing="ease-in-quad">
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}>
                 <div className=" flex flex-col justify-center  max-w-4xl text-center lg:text px-5 items-center lg:items">
-                    <h2 className="text-xl lg:text-3xl text-center font-semibold text-gray-800  inline-block bg-clip-text md:shadowtext">Our Partners</h2>
+                    <h2 className="text-xl lg:text-3xl text-center font-semibold md:text-gray-800 text-gray-400 inline-block bg-clip-text md:shadowtext">Our Partners</h2>
                     <h1 className="text-5xl lg:text-6xl text-center text-gray-800 font-black mb-3 inline-block  bg-clip-text shadowtext">Collaborative Excellence in AI</h1>
                 </div>
             </div>
@@ -77,14 +74,14 @@ const Partners = () => {
                                         <h3 className='text-xl lg:text-3xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Title}</h3>
                                         <p className='text-base lg:text-lg  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Des}</p>
                                     </div>
-                                    <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-cover' alt="" />
+                                    <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-contain' alt="" />
                                 </div>
                             )
                         }
                         else {
                             return (
                                 <div className=' flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
-                                    <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-cover' alt="" />
+                                    <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-contain' alt="" />
                                     <div className='basis-[50%] text-left py-8 flex flex-col gap-2'>
                                         <h2 className='text-2xl lg:text-5xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Name}</h2>
                                         <h3 className='text-xl lg:text-3xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Title}</h3>

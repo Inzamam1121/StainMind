@@ -158,10 +158,7 @@ const Service = () => {
 
     return (
         <div className='md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundService`}
-                data-aos="fade-up"
-                data-aos-duration='1000'
-                data-aos-easing="ease-in-quad">
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundService`}>
                 <div className=" flex flex-col justify-center  max-w-3xl text-center lg:text px-5 items-center lg:items">
                     <h1 className="text-5xl lg:text-6xl text-center text-gray-800 font-black mb-3 inline-block  bg-clip-text shadowtext">Tailored AI Solutions</h1>
                 </div>
@@ -173,8 +170,8 @@ const Service = () => {
                         <h1 className='text-2xl lg:text-5xl font-extrabold text-gray-700  inline-block bg-clip-text'>AI Consulting Service</h1>
                         <p className="text-base lg:text-xl pl-8 text-black  inline-block bg-clip-text">{serviceData.consultingServices.Overview}</p>
                     </div>
-                    <div className='md:basis-[40%] w-[100%] h-[100%]'>
-                        <img src={serviceData.consultingServices.Image} className='w-[100%] h-[100%]' alt="" />
+                    <div className='md:basis-[40%] w-[100%] h-[100%] rounded-lg'>
+                        <img src={serviceData.consultingServices.Image} className='w-[100%] h-[100%] rounded-lg' alt="" />
                     </div>
 
                 </div>
@@ -213,8 +210,8 @@ const Service = () => {
                         <h1 className='text-2xl lg:text-5xl font-extrabold text-gray-700  inline-block bg-clip-text'>Our AI Consulting Methodologies</h1>
                         <p className="text-base lg:text-xl pl-8 text-black  inline-block bg-clip-text">{serviceData.consultingMethodologies.Overview}</p>
                     </div>
-                    <div className='md:basis-[40%] w-[100%] h-[100%]'>
-                        <img src={serviceData.consultingMethodologies.Image} className='w-[100%] h-[100%]' alt="" />
+                    <div className='md:basis-[40%] w-[100%] h-[100%] rounded-[25px]'>
+                        <img src={serviceData.consultingMethodologies.Image} className='w-[100%] h-[100%] rounded-[25px]' alt="" />
                     </div>
 
                 </div>

@@ -5,7 +5,6 @@ import Retail from "../images/Retail.png";
 import ECommerce from "../images/ECommerce.png";
 import Manfacture from "../images/Manufacturing.png";
 import Medical from "../images/Medical.png";
-import { CAccordion, CAccordionBody, CAccordionHeader, CAccordionItem } from '@coreui/react';
 
 const Story = () => {
     const Project = [
@@ -52,10 +51,10 @@ const Story = () => {
     ]
     return (
         <div className='mx-1 md:mx-3 lg:mx-5'>
-            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh] BackgroundAbout`}>
+            <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh]`}>
                 <div className=" flex flex-col justify-center  text-center lg:text px-5 items-center lg:items">
-                    <h2 className="text-xl lg:text-3xl text-center font-semibold text-white  inline-block bg-clip-text shadowtext">Our Success Stories</h2>
-                    <h1 className="text-3xl lg:text-6xl text-center text-gray-900 font-black mb-3 inline-block  bg-clip-text shadowtext">Transforming Chaos into Strategy</h1>
+                    <h2 className="text-xl lg:text-3xl text-center font-semibold text-gray-500  inline-block bg-clip-text">Our Success Stories</h2>
+                    <h1 className="text-3xl lg:text-6xl text-center text-gray-700 font-black mb-3 inline-block  bg-clip-text">Transforming Chaos into Strategy</h1>
                 </div>
             </div>
             <div className="flex justify-center align-middle flex-col mb-16 space-y-4 lg:space-y-8">
@@ -69,26 +68,21 @@ const Story = () => {
                                 <div className='flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
                                     <div className='md:basis-[50%] w-[100%] text-left py-8 flex flex-col gap-2'>
                                         <h2 className='text-2xl lg:text-5xl font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.industry}</h2>
-                                        <CAccordion>
-                                            <CAccordionItem itemKey={1}>
-                                                <CAccordionHeader>Client Challenge</CAccordionHeader>
-                                                <CAccordionBody>
-                                                    {item.clientChallenge}
-                                                </CAccordionBody>
-                                            </CAccordionItem>
-                                            <CAccordionItem itemKey={2}>
-                                                <CAccordionHeader>Stain Mind's Solution</CAccordionHeader>
-                                                <CAccordionBody>
-                                                    {item.solution}
-                                                </CAccordionBody>
-                                            </CAccordionItem>
-                                            <CAccordionItem itemKey={3}>
-                                                <CAccordionHeader>Outcome</CAccordionHeader>
-                                                <CAccordionBody>
-                                                    {item.outcome}
-                                                </CAccordionBody>
-                                            </CAccordionItem>
-                                        </CAccordion>
+                                        <ul>
+                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                            Client Challenge
+                                            </li>
+                                            <p className='pl-4'>{item.clientChallenge}</p>
+                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                            Stain Mind's Solution
+                                            </li>
+                                            <p className='pl-4'>{item.solution}</p>
+                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                            Outcome
+                                            </li>
+                                            <p className='pl-4'>{item.outcome}</p>
+
+                                        </ul>
                                     </div>
                                     <img src={item.Image} className='basis-[35%] w-[100%] max-w-lg rounded-xl h-[100%] object-cover' alt="" />
                                 </div>
@@ -100,26 +94,21 @@ const Story = () => {
                                     <img src={item.Image} className='basis-[35%] w-[100%] max-w-lg rounded-xl h-[100%] object-cover' alt="" />
                                     <div className='md:basis-[50%] w-[100%] text-left py-8 flex flex-col gap-2'>
                                         <h2 className='text-2xl lg:text-5xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.industry}</h2>
-                                        <CAccordion >
-                                            <CAccordionItem itemKey={1}>
-                                                <CAccordionHeader>Client Challenge</CAccordionHeader>
-                                                <CAccordionBody>
-                                                    {item.clientChallenge}
-                                                </CAccordionBody>
-                                            </CAccordionItem>
-                                            <CAccordionItem itemKey={2}>
-                                                <CAccordionHeader>Stain Mind's Solution</CAccordionHeader>
-                                                <CAccordionBody>
-                                                    {item.solution}
-                                                </CAccordionBody>
-                                            </CAccordionItem>
-                                            <CAccordionItem itemKey={3}>
-                                                <CAccordionHeader>Outcome</CAccordionHeader>
-                                                <CAccordionBody>
-                                                    {item.outcome}
-                                                </CAccordionBody>
-                                            </CAccordionItem>
-                                        </CAccordion>
+                                        <ul>
+                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                            Client Challenge
+                                            </li>
+                                            <p className='pl-4'>{item.clientChallenge}</p>
+                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                            Stain Mind's Solution
+                                            </li>
+                                            <p className='pl-4'>{item.solution}</p>
+                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                            Outcome
+                                            </li>
+                                            <p className='pl-4'>{item.outcome}</p>
+
+                                        </ul>
                                     </div>
                                 </div>
                             )

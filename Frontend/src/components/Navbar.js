@@ -5,8 +5,6 @@ import Logo from "../images/logo/Logo.png";
 // import AccountImage from "../images/profile_white.png";
 import MobileMenu from "./MobileMenu";
 import { useNavigate } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import { ReactSession } from "react-client-session";
 
 
 const Navbar = (props) => {

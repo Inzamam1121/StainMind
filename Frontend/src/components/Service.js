@@ -164,13 +164,10 @@ const Service = () => {
             </div>
 
             <div className='w-[95%] md:w-[85%] m-auto lg:pb-20'>
-                <div className="flex flex-col md:flex-row justify-between items-center my-4">
-                    <div className="md:basis-[45%] text-left py-10">
+                <div className="flex flex-col md:flex-row justify-center items-center my-4 w-[95%] md:w-[90%] lg:w-[80%] m-auto">
+                    <div className="text-center">
                         <h1 className='text-2xl lg:text-5xl font-extrabold text-gray-700  inline-block bg-clip-text'>AI Consulting Service</h1>
-                        <p className="text-base lg:text-xl pl-8 text-black  inline-block bg-clip-text">{serviceData.consultingServices.Overview}</p>
-                    </div>
-                    <div className='md:basis-[40%] w-[100%] h-[100%] rounded-lg'>
-                        <img src={serviceData.consultingServices.Image} className='w-[100%] h-[100%] rounded-lg' alt="" />
+                        <p className="text-base lg:text-xl md:pl-8 text-black  inline-block bg-clip-text">{serviceData.consultingServices.Overview}</p>
                     </div>
 
                 </div>
@@ -184,16 +181,16 @@ const Service = () => {
                             </div>
                             <div className="basis-[50%] w-[100%] h-[100%] text-left">
                                 <h2 className='text-xl lg:text-3xl text-left font-extrabold text-gray-700  inline-block bg-clip-text'>Key Elements</h2>
-                                    <ul>
-                                        {item?.keyElements?.map((item2, index2) => (
-                                            <>
+                                <ul>
+                                    {item?.keyElements?.map((item2, index2) => (
+                                        <>
                                             <li key={index2} className='text-gray-700 text-lg font-bold'>
                                                 {item2.Name}
                                             </li>
-                                                <p className='pl-4'>{item2.Des}</p>
-                                            </>
-                                        ))}
-                                    </ul>
+                                            <p className='pl-4'>{item2.Des}</p>
+                                        </>
+                                    ))}
+                                </ul>
                             </div>
                         </div>
                     ))}
@@ -202,21 +199,17 @@ const Service = () => {
             </div>
 
             <div className='w-[95%] md:w-[85%] m-auto pb-20'>
-                <div className="flex flex-col md:flex-row justify-between items-center my-4">
-                    <div className="md:basis-[45%] text-left py-10">
+                <div className="flex flex-col md:flex-row justify-center items-center my-4 w-[95%] md:w-[90%] lg:w-[80%] m-auto">
+                    <div className=" text-center">
                         <h1 className='text-2xl lg:text-5xl font-extrabold text-gray-700  inline-block bg-clip-text'>Our AI Consulting Methodologies</h1>
-                        <p className="text-base lg:text-xl pl-8 text-black  inline-block bg-clip-text">{serviceData.consultingMethodologies.Overview}</p>
+                        <p className="text-base lg:text-xl md:pl-8 text-black  inline-block bg-clip-text">{serviceData.consultingMethodologies.Overview}</p>
                     </div>
-                    <div className='md:basis-[40%] w-[100%] h-[100%] rounded-[25px]'>
-                        <img src={serviceData.consultingMethodologies.Image} className='w-[100%] h-[100%] rounded-[25px]' alt="" />
-                    </div>
-
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 justify-between items-start gap-20 ">
                     {serviceData?.consultingMethodologies?.Service?.map((item, index) => (
-                        <div className="bg-[#fff] rounded-2xl  text-gray-700 ease-in-out duration-500 shadow-gray-700 shadow-xl px-8 py-8 W-[100%] text-left h-[100%] flex  flex-col justify-start gap-2" key={index}>
-                            <h2 className='text-xl md:text-2xl font-extrabold   inline-block bg-clip-text'>{item.Name}</h2>
+                        <div className="bg-[#fff] rounded-2xl  text-gray-700 shadow-gray-700 shadow-xl px-4 py-4 md:px-8 md:py-8 W-[100%] text-left h-[100%] flex  flex-col justify-start gap-2" key={index}>
+                            <h2 className='text-xl md:text-2xl font-extrabold inline-block bg-clip-text'>{item.Name}</h2>
                             {item.Parts.map((item2, index2) => (
                                 <div key={index2} className='pl-8'>
                                     <h3 className='text-base md:text-xl font-extrabold  inline-block bg-clip-text'>{item2.Name}</h3>

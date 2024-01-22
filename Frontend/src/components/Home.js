@@ -1,9 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Typist from 'react-typist-component';
 import AOS from 'aos';
-import { Link } from "react-router-dom"
-import Service1 from "../images/Service1.png";
-import Service2 from "../images/Service2.png";
 import "../../node_modules/aos/dist/aos.css"
 import "../assets/Style/custom.css"
 import AlertContext from '../Alert/AlertContext';
@@ -69,7 +65,7 @@ function Home(props) {
 
 
     const feature1 = (
-        <div className='flex flex-col lg:flex-row justify-around items-start flex-wrap lg:flex-nowrap mb-12 lg:mb-24 rounded-md elevation py-10 lg:py-20 gap-8 mx-36'>
+        <div className='flex flex-col lg:flex-row justify-around items-start flex-wrap lg:flex-nowrap pb-12 lg:pb-24 rounded-md elevation py-10 lg:py-20 gap-8 w-[95%] md:w-[90%] lg:w-[80%] m-auto'>
             <p className="text-justify text-lg mb-4">
                 Welcome to Stain Mind – the nexus where chaos and strategy converge in the realm of AI consulting. At Stain Mind, we embrace the intricate dance of disorder and order, transforming the tumultuous landscape of AI innovation into streamlined, strategic solutions. Our mission is to guide visionary leaders through the labyrinth of AI's complexities, shedding light on paths less traveled and revealing opportunities hidden within the chaos.
             </p>
@@ -90,7 +86,7 @@ function Home(props) {
         <div className="bg-transparent">
             <div className={`flex flex-row justify-around mt-12 h-[60vh] md:h-[70vh] lg:h-[100vh]`}>
                 <div className=" flex flex-col justify-center text-center lg:text px-5 items-center lg:items">
-                    <h2 className="text-2xl md:text-4xl lg:text-5xl text-center font-semibold text-gray-900  inline-block bg-clip-text"> Welcome to  </h2>
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl text-center font-semibold  inline-block bg-clip-text"> Welcome to  </h2>
                     <h1 className="text-5xl md:text-8xl lg:text-9xl text-center text-gray-700 font-black mb-3 inline-block  bg-clip-text">STAIN MIND</h1>
                 </div>
             </div>

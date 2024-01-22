@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../assets/Style/custom.css"
 
 const Partners = () => {
+
+    const [screenWidth, setScreenWidth] = useState(null);
+
+    useEffect(() => {
+        // Check if we're running in a browser environment before using window
+        if (typeof window !== 'undefined') {
+            setScreenWidth(window.outerWidth);
+
+            // Add an event listener to update screenWidth on window resize
+            const handleResize = () => {
+                setScreenWidth(window.outerWidth);
+            };
+
+            window.addEventListener('resize', handleResize);
+
+            // Clean up the event listener when the component unmounts
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }
+    }, []);
 
     const Part = [
         {
@@ -36,21 +57,6 @@ const Partners = () => {
         }
     ]
 
-    const PartNew=[
-        {
-            Title:"Technology Partners",
-            Des:"Our technology partners provide us with the latest tools and platforms, ensuring that our clients benefit from the forefront of AI advancements."
-        },
-        {
-            Title:"Academic Partners",
-            Des:"Collaborations with leading academic institutions keep us connected to groundbreaking research and emerging trends in AI and data science."
-        },
-        {
-            Title:"Industry Collaborators",
-            Des:"Our industry collaborators bring in-depth knowledge and sector-specific insights, enabling us to tailor our AI solutions to meet diverse industry needs."
-        }
-    ]
-
     return (
         <div className='md:mx-3 lg:mx-5'>
             <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh]`}>
@@ -66,31 +72,43 @@ const Partners = () => {
 
                 <div className="flex flex-col justify-center items-center flex-wrap gap-5 md:gap-10 lg:gap-20">
                     {Part.map((item, index) => {
-                        if (index % 2 == 0) {
-                            return (
-                                <div className='flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
-                                    <div className='basis-[50%] text-left py-8 flex flex-col gap-2'>
-                                        <h2 className='text-2xl lg:text-5xl font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Name}</h2>
-                                        <h3 className='text-xl lg:text-3xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Title}</h3>
-                                        <p className='text-base lg:text-lg  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Des}</p>
+                        if(screenWidth>650){
+                            if (index % 2 == 0) {
+                                return (
+                                    <div className='flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
+                                        <div className='basis-[50%] text-left py-8 flex flex-col gap-2'>
+                                            <h2 className='text-2xl lg:text-5xl font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Name}</h2>
+                                            <h3 className='text-xl lg:text-3xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Title}</h3>
+                                            <p className='text-base lg:text-lg  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Des}</p>
+                                        </div>
+                                        <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-contain' alt="" />
                                     </div>
-                                    <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-contain' alt="" />
-                                </div>
-                            )
-                        }
-                        else {
+                                )
+                            }
+                            else {
+                                return (
+                                    <div className=' flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
+                                        <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-contain' alt="" />
+                                        <div className='basis-[50%] text-left py-8 flex flex-col gap-2'>
+                                            <h2 className='text-2xl lg:text-5xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Name}</h2>
+                                            <h3 className='text-xl lg:text-3xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Title}</h3>
+                                            <p className='text-base lg:text-lg  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Des}</p>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        }else{
                             return (
                                 <div className=' flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
-                                    <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-contain' alt="" />
                                     <div className='basis-[50%] text-left py-8 flex flex-col gap-2'>
                                         <h2 className='text-2xl lg:text-5xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Name}</h2>
                                         <h3 className='text-xl lg:text-3xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Title}</h3>
                                         <p className='text-base lg:text-lg  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.Des}</p>
                                     </div>
+                                    <img src={item.Image} className='basis-[35%] w-[100%] rounded-xl h-[100%] object-contain' alt="" />
                                 </div>
                             )
                         }
-
                     })}
                 </div>
 

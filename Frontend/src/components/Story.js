@@ -50,70 +50,40 @@ const Story = () => {
         }
     ]
     return (
-        <div className='mx-1 md:mx-3 lg:mx-5'>
+        <div className='md:mx-3 lg:mx-5'>
             <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh]`}>
                 <div className=" flex flex-col justify-center  text-center lg:text px-5 items-center lg:items">
-                    <h2 className="text-xl lg:text-3xl text-center font-semibold text-gray-500  inline-block bg-clip-text">Our Success Stories</h2>
+                    <h2 className="text-xl lg:text-3xl text-center font-semibold  inline-block bg-clip-text">Our Success Stories</h2>
                     <h1 className="text-3xl lg:text-6xl text-center text-gray-700 font-black mb-3 inline-block  bg-clip-text">Transforming Chaos into Strategy</h1>
                 </div>
             </div>
             <div className="flex justify-center align-middle flex-col mb-16 space-y-4 lg:space-y-8">
                 <h2 className="text-xl lg:text-5xl font-semibold text-center text-gray-700  inline-block bg-clip-text">Our Success</h2>
-                <p className="text-base lg:max-w-[50%] lg:text-xl text-center text-black  inline-block bg-clip-text m-auto">At Stain Mind, our journey with each client is a story of transformation – from navigating the chaotic currents of AI innovation to achieving strategic triumphs. Here are some narratives that showcase our ability to turn challenges into successes through bespoke AI solutions</p>
+                <p className="text-base max-w-[95%] lg:max-w-[50%] lg:text-xl text-center text-black  inline-block bg-clip-text m-auto">At Stain Mind, our journey with each client is a story of transformation – from navigating the chaotic currents of AI innovation to achieving strategic triumphs. Here are some narratives that showcase our ability to turn challenges into successes through bespoke AI solutions</p>
 
                 <div className="flex flex-col justify-center items-center flex-wrap gap-20 w-[95%] lg:w-[80%] m-auto pt-20 pb-10">
                     {Project.map((item, index) => {
-                        if (index % 2 == 0) {
-                            return (
-                                <div className='flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
-                                    <div className='md:basis-[50%] w-[100%] text-left py-8 flex flex-col gap-2'>
-                                        <h2 className='text-2xl lg:text-5xl font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.industry}</h2>
-                                        <ul>
-                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                        return (
+                            <div className='flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
+                                <div className='w-[100%] text-left flex flex-col gap-2'>
+                                    <h2 className='text-2xl lg:text-5xl font-semibold text-center mb-10 text-gray-700  inline-block bg-clip-text'>{item.industry}</h2>
+                                    <ul className='flex flex-col md:flex-row justify-between gap-10 md:gap-10 lg:gap-20 pl-0'>
+                                        <li key={index} className='md:basis-[33.33%] bg-[#fff] rounded-2xl  text-gray-700 shadow-gray-700 shadow-xl px-4 py-4 md:px-8 md:py-8 W-[100%] text-left h-[auto] flex  flex-col justify-start gap-2'>
                                             Client Challenge
-                                            </li>
                                             <p className='pl-4'>{item.clientChallenge}</p>
-                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                        </li>
+                                        <li key={index} className='md:basis-[33.33%] bg-[#fff] rounded-2xl  text-gray-700 shadow-gray-700 shadow-xl px-4 py-4 md:px-8 md:py-8 W-[100%] text-left h-[auto] flex  flex-col justify-start gap-2'>
                                             Stain Mind's Solution
-                                            </li>
                                             <p className='pl-4'>{item.solution}</p>
-                                            <li key={index} className='text-gray-700 text-lg font-bold'>
+                                        </li>
+                                        <li key={index} className= 'md:basis-[33.33%] bg-[#fff] rounded-2xl  text-gray-700 shadow-gray-700 shadow-xl px-4 py-4 md:px-8 md:py-8 W-[100%] text-left h-[auto] flex  flex-col justify-start gap-2'>
                                             Outcome
-                                            </li>
                                             <p className='pl-4'>{item.outcome}</p>
-
-                                        </ul>
-                                    </div>
-                                    <img src={item.Image} className='basis-[35%] w-[100%] max-w-lg rounded-xl h-[100%] object-cover' alt="" />
+                                        </li>
+                                    </ul>
                                 </div>
-                            )
-                        }
-                        else {
-                            return (
-                                <div className=' flex flex-col md:flex-row justify-between items-start w-[100%] h-[100%] gap-10'>
-                                    <img src={item.Image} className='basis-[35%] w-[100%] max-w-lg rounded-xl h-[100%] object-cover' alt="" />
-                                    <div className='md:basis-[50%] w-[100%] text-left py-8 flex flex-col gap-2'>
-                                        <h2 className='text-2xl lg:text-5xl  font-semibold text-left text-gray-700  inline-block bg-clip-text'>{item.industry}</h2>
-                                        <ul>
-                                            <li key={index} className='text-gray-700 text-lg font-bold'>
-                                            Client Challenge
-                                            </li>
-                                            <p className='pl-4'>{item.clientChallenge}</p>
-                                            <li key={index} className='text-gray-700 text-lg font-bold'>
-                                            Stain Mind's Solution
-                                            </li>
-                                            <p className='pl-4'>{item.solution}</p>
-                                            <li key={index} className='text-gray-700 text-lg font-bold'>
-                                            Outcome
-                                            </li>
-                                            <p className='pl-4'>{item.outcome}</p>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            )
-                        }
-
+                            </div>
+                        )
                     })}
                 </div>
 

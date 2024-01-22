@@ -102,7 +102,7 @@ const Contact = () => {
                     <div>
                         <button
                             type="submit"
-                            className="bg-gray-500 text-white px-4 py-3 rounded-md hover:bg-black w-fit self-center mt-5 hover:scale-125 hover:-translate-y-5 ease-out duration-300"
+                            className="bg-gray-500 text-white px-4 py-3 rounded-md w-fit self-center mt-5"
                             disabled={Submit ? true : false}
                         >
                             Submit
@@ -140,19 +140,6 @@ const Contact = () => {
             </div>
             {comp3}
 
-            <div className="flex flex-col relative my-20">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-24 w-[90%] lg:w-[80%] m-auto">
-                    {Phone.map((item, index) => (
-                        <div key={index} className="bg-white rounded-2xl shadow-gray-700 shadow-xl pt-6 pb-6 py-10 text-center w-[100%] h-[200px] relative flex flex-col gap-1 justify-center items-center">
-                            <div className='w-[50px] h-[50px] md:w-[50px] md:h-[50px] bg-gray-700 p-2 md:p-3 m-auto left-0 right-0 rounded-2xl text-[#fff] cursor-pointer'>
-                                {<item.Icon className='w-[100%] h-[100%] object-cover ' />}
-                            </div>
-                            <h3 className="text-xl lg:text-xl font-extrabold text-center text-gray-700  inline-block bg-clip-text w-[90%]">{item.Content}</h3>
-                            <h5 className="text-base lg:text-lg font-medium text-center text-gray-500  inline-block bg-clip-text">{item.Type}</h5>
-                        </div>
-                    ))}
-                </div>
-            </div>
 
         </div>
     )

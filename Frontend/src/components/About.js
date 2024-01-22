@@ -4,11 +4,9 @@ import "../../node_modules/aos/dist/aos.css"
 
 
 import Picture from "../images/CEO.png";
-import About2 from "../images/About2.png";
 
 
 import "../assets/Style/custom.css"
-import { Link } from 'react-router-dom';
 import AlertContext from '../Alert/AlertContext';
 
 
@@ -153,38 +151,32 @@ const About = (props) => {
     ]
 
     const feature2 = (
-        <div className='flex flex-row  justify-around flex-wrap lg:flex-nowrap rounded-md elevation lg:w-[85%] md:w-[90%] w-[95%] m-auto'>
-            <div className=" flex flex-col justify-center text-left px-5 md:basis-[55%]">
-                <h2 className="text-2xl lg:text-5xl mb-10 font-bold text-gray-700"> About us </h2>
-                <p className="text-lg lg:text-xl text-black mb-4 text-justify">
-                    At Stain Mind, our journey began with a fundamental belief: in the chaos of AI innovation lies the seed of unparalleled strategic opportunity. Our inception was fueled by a vision to harness this tumultuous energy and channel it into transformative AI strategies for businesses.
-                </p>
-                <p className="text-lg lg:text-xl text-black mb-8 text-justify">
-                    Founded by a group of AI enthusiasts and strategic thinkers, Stain Mind emerged from the desire to navigate the complexities of artificial intelligence and simplify them for practical business applications. We recognized early on that the rapid evolution of AI, while overwhelming for many, is ripe with potential to redefine industries, reinvent processes, and revolutionize customer experiences.
-                </p>
-
-            </div>
-            <div className=" w-[100%] md:basis-[45%] md:w-auto text-black text-md flex flex-col justify-center text-left px-5 mt-10">
-
-                <img src={About2} alt="" srcset="" />
-
+        <div className='flex flex-row  justify-center flex-wrap lg:flex-nowrap rounded-md elevation mt-20' >
+            <div className=" flex flex-col justify-center text-left px-5">
+                <h2 className="text-2xl lg:text-5xl mb-5 font-bold text-gray-700"> About us </h2>
             </div>
         </div>
     );
 
     const feature5 = (
-        <div className='flex flex-col lg:flex-row justify-around items-start flex-wrap lg:flex-nowrap mb-12 lg:mb-24 rounded-md elevation py-10 lg:py-20 gap-8 mx-36'>
-            <p className="text-justify text-lg mb-4">
-            Our commitment has always been to demystify AI, making it accessible and strategically viable for organizations of all sizes. We observed how many businesses struggled to align the disruptive force of AI with their strategic goals, often getting lost in the maze of technological jargon and uncharted territories of digital transformation.
+        <div className='flex flex-col lg:flex-row justify-around items-start flex-wrap lg:flex-nowrap rounded-md elevation pb-10 lg:pb-20 gap-8 w-[95%] md:w-[90%] lg:w-[80%] m-auto'>
+            <p className="text-lg lg:text-xl text-black mb-4 text-justify">
+                At Stain Mind, our journey began with a fundamental belief: in the chaos of AI innovation lies the seed of unparalleled strategic opportunity. Our inception was fueled by a vision to harness this tumultuous energy and channel it into transformative AI strategies for businesses.
             </p>
-            <p className="text-justify text-lg mb-4">
-            Stain Mind was born out of this need for clarity. We embarked on a mission to be the compass that guides companies through the AI landscape, turning the apparent chaos into a well-orchestrated symphony of strategic success. From identifying AI-driven opportunities to executing bespoke solutions, our approach has consistently been about creating harmony between technological possibilities and business realities.
+            <p className="text-lg lg:text-xl text-black mb-4 text-justify">
+                Founded by a group of AI enthusiasts and strategic thinkers, Stain Mind emerged from the desire to navigate the complexities of artificial intelligence and simplify them for practical business applications. We recognized early on that the rapid evolution of AI, while overwhelming for many, is ripe with potential to redefine industries, reinvent processes, and revolutionize customer experiences.
             </p>
-            <p className="text-justify text-lg">
-            Today, Stain Mind stands as a testament to the power of blending innovative AI solutions with strategic foresight. Our story is one of passion, perseverance, and the relentless pursuit of excellence in a field that's constantly evolving. As we continue to pioneer AI strategies, we remain dedicated to our original vision – transforming chaos into strategy, one AI solution at a time.
+            <p className="text-lg lg:text-xl text-black mb-4 text-justify">
+                Our commitment has always been to demystify AI, making it accessible and strategically viable for organizations of all sizes. We observed how many businesses struggled to align the disruptive force of AI with their strategic goals, often getting lost in the maze of technological jargon and uncharted territories of digital transformation.
             </p>
-            <p className="text-justify text-lg">
-            As we journey through the evolving landscape of AI, our strength lies in our diverse and talented team at Stain Mind. Each member brings a unique blend of expertise, experience, and vision, forming the backbone of our pioneering strategies.
+            <p className="text-lg lg:text-xl text-black mb-4 text-justify">
+                Stain Mind was born out of this need for clarity. We embarked on a mission to be the compass that guides companies through the AI landscape, turning the apparent chaos into a well-orchestrated symphony of strategic success. From identifying AI-driven opportunities to executing bespoke solutions, our approach has consistently been about creating harmony between technological possibilities and business realities.
+            </p>
+            <p className="text-lg lg:text-xl text-black mb-4 text-justify">
+                Today, Stain Mind stands as a testament to the power of blending innovative AI solutions with strategic foresight. Our story is one of passion, perseverance, and the relentless pursuit of excellence in a field that's constantly evolving. As we continue to pioneer AI strategies, we remain dedicated to our original vision – transforming chaos into strategy, one AI solution at a time.
+            </p>
+            <p className="text-lg lg:text-xl text-black mb-4 text-justify">
+                As we journey through the evolving landscape of AI, our strength lies in our diverse and talented team at Stain Mind. Each member brings a unique blend of expertise, experience, and vision, forming the backbone of our pioneering strategies.
             </p>
         </div>
     );
@@ -194,7 +186,7 @@ const About = (props) => {
             <div className={`flex flex-row justify-around mt-12 h-[60vh] lg:h-[90vh]`}>
                 <div className=" flex flex-col justify-center  text-center lg:text px-5 items-center lg:items">
                     <h2 className="text-xl lg:text-3xl text-center font-semibold   inline-block bg-clip-text">Our Story</h2>
-                    <h1 className="text-5xl lg:text-6xl text-center text-gray-900 font-black mb-3 inline-block  bg-clip-text ">Pioneering AI Strategies</h1>
+                    <h1 className="text-5xl lg:text-6xl text-center text-gray-700 font-black mb-3 inline-block  bg-clip-text ">Pioneering AI Strategies</h1>
                 </div>
             </div>
             <div className="flex justify-center align-middle flex-col mb-16 space-y-4 lg:space-y-8">
